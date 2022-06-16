@@ -8,14 +8,18 @@
         Title="MainWindow" Height="580" Width="400">
     <DockPanel LastChildFill="true">
 
-        <Grid Height="100" DockPanel.Dock="Top">
+        <Grid Height="100" 
+              DockPanel.Dock="Top"
+              Background="WhiteSmoke">
 
             <TextBox x:Name="txtExp" 
                      Text="1234" 
                      HorizontalAlignment="Right" 
                      FontSize="22"
                      Margin="15"
-                     BorderThickness="0"></TextBox>
+                     BorderThickness="0"
+                     Background="WhiteSmoke"
+                     ></TextBox>
 
             <TextBox x:Name="txtResult" 
                      Text="0" 
@@ -23,26 +27,152 @@
                      VerticalAlignment="Bottom" 
                      FontSize="32"
                      Margin="15"
-                     BorderThickness="0"></TextBox>
+                     BorderThickness="0"
+                     Background="WhiteSmoke"
+                     ></TextBox>
 
         </Grid>
-        <Grid Height="50" DockPanel.Dock="Top">
+        <Grid Height="50" 
+              DockPanel.Dock="Top"
+              Background="WhiteSmoke">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <!--메모리 연산-->
-            <!--6:27-->
+            <Button x:Name="BtnMC" 
+                    Grid.Column="0"
+                    Content="MC"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    BorderThickness="0"
+                    Margin="2,1,1,1" 
+                    Background="WhiteSmoke"></Button>
+            <Button x:Name="BtnMR" 
+                    Grid.Column="1"
+                    Content="MR"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    BorderThickness="0"
+                    Margin="2,1,1,1" 
+                    Background="WhiteSmoke"></Button>
+            <Button x:Name="BtnMplus" 
+                    Grid.Column="2"
+                    Content="M+"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    BorderThickness="0"
+                    Margin="2,1,1,1" 
+                    Background="WhiteSmoke"></Button>
+            <Button x:Name="BtnMminus" 
+                    Grid.Column="3"
+                    Content="MC"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    BorderThickness="0"
+                    Margin="2,1,1,1" 
+                    Background="WhiteSmoke"></Button>
+            <Button x:Name="BtnMS" 
+                    Grid.Column="4"
+                    Content="MS"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    BorderThickness="0"
+                    Margin="2,1,1,1" 
+                    Background="WhiteSmoke"></Button>
+            <!--Margin 좌 상 우 하 여백 지정-->
         </Grid>
 
         <Grid DockPanel.Dock="Top">
-
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!--첫째줄-->
+            <Button x:Name="Btndivision" 
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Content="%"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    BorderThickness="0"
+                    Margin="2,1,1,1"></Button>
+            <Button x:Name="BtnCE" 
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Content="CE"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    BorderThickness="0"
+                    Margin="2,1,1,1"></Button>
+            <Button x:Name="BtnC" 
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    Content="C"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    BorderThickness="0"
+                    Margin="2,1,1,1"></Button>
+            <Button x:Name="Btndelete" 
+                    Grid.Column="3"
+                    Grid.Row="0"
+                    Content="Delete"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    BorderThickness="0"
+                    Margin="2,1,1,1"></Button>
+            <!--둘째줄-->
+            <Button x:Name="Btn1" 
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Content="1/x"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    BorderThickness="0"
+                    Margin="2,1,1,1"></Button>
+            <Button x:Name="Btn2" 
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Content="x^2"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    BorderThickness="0"
+                    Margin="2,1,1,1"></Button>
+            <Button x:Name="Btn3" 
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    Content="루트"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    BorderThickness="0"
+                    Margin="2,1,1,1"></Button>
+            <Button x:Name="Btn4" 
+                    Grid.Column="3"
+                    Grid.Row="1"
+                    Content="Delete"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    BorderThickness="0"
+                    Margin="2,1,1,1"></Button>
         </Grid>
     </DockPanel>
 
 
 </Window>
 
+
+<!--6:27-->
    
