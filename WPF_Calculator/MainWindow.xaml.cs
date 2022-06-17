@@ -24,5 +24,16 @@ namespace WPF_Calculator
         {
             InitializeComponent();
         }
+
+        private void btnNum_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            if(txtResult.Text == "0")
+                txtResult.Text = btn.Content.ToString();
+            else
+                txtResult.Text += btn.Content.ToString();
+
+
+        }
     }
 }
