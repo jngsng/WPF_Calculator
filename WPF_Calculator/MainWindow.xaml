@@ -13,7 +13,7 @@
               Background="WhiteSmoke">
 
             <TextBox x:Name="txtExp" 
-                     Text="1234" 
+                     Text="" 
                      HorizontalAlignment="Right" 
                      FontSize="22"
                      Margin="15"
@@ -175,7 +175,8 @@
                     FontSize="25"
                     BorderThickness="0"
                     Margin="2,1,1,1"
-                    Background="DarkGray">
+                    Background="DarkGray"
+                    Click="op_Click">
             </Button>
             <!--셋째줄-->
             <Button Grid.Column="0"
@@ -215,7 +216,8 @@
                     FontSize="16"
                     BorderThickness="0"
                     Margin="2,1,1,1"
-                    Background="DarkGray">
+                    Background="DarkGray"
+                    Click="op_Click">
             </Button>
             <!--넷째줄-->
             <Button Grid.Column="0"
@@ -255,7 +257,8 @@
                     FontSize="25"
                     BorderThickness="0"
                     Margin="2,1,1,1"
-                    Background="DarkGray">
+                    Background="DarkGray"
+                    Click="op_Click">
             </Button>
             <!--다섯째줄-->
             <Button Grid.Column="0"
@@ -295,7 +298,8 @@
                     FontSize="25"
                     BorderThickness="0"
                     Margin="2,1,1,1"
-                    Background="DarkGray">
+                    Background="DarkGray"
+                    Click="op_Click">
             </Button>
             <!--여섯째줄-->
             <Button Grid.Column="0"
@@ -333,7 +337,8 @@
                     FontSize="25"
                     BorderThickness="0"
                     Margin="2,1,1,1"
-                    Background="DarkGray">
+                    Background="DarkGray"
+                    Click="btnEqual_Click">
             </Button>
         </Grid>
     </DockPanel>

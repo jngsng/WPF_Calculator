@@ -20,6 +20,10 @@ namespace WPF_Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        double saved = 0;
+        string op = string.Empty;
+        bool opFlag = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -28,12 +32,46 @@ namespace WPF_Calculator
         private void btnNum_Click(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
-            if(txtResult.Text == "0")
+            if(txtResult.Text == "0" || opFlag == true)
+            {
                 txtResult.Text = btn.Content.ToString();
+                opFlag = false;
+            }
+                
             else
                 txtResult.Text += btn.Content.ToString();
 
 
+        }
+
+        private void op_Click(object sender, RoutedEventArgs e)
+        {
+            opFlag = true;
+            saved = double.Parse(txtResult.Text);
+            Button btn = sender as Button;
+            op = btn.Content.ToString();
+            txtExp.Text = saved + " " + op;
+        }
+
+        private void btnEqual_Click(object sender, RoutedEventArgs e)
+        {
+            double v = double.Parse(txtResult.Text);
+            switch(op)
+            {
+                case "+":
+                    txtResult.Text = (saved + v).ToString();
+                    break;
+                case "-":
+                    txtResult.Text = (saved + v).ToString();
+                    break;
+                case "X":
+                    txtResult.Text = (saved + v).ToString();
+                    break;
+                case "÷":
+                    txtResult.Text = (saved + v).ToString();
+                    break;
+            }
+            txtExp.Text = saved + " " + op + " " + v + " = ";
         }
     }
 }
