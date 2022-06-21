@@ -96,5 +96,21 @@ namespace WPF_Calculator
             // CE (clear) 버튼
             txtResult.Text = "0";
         }
+
+        private void btnC_Click(object sender, RoutedEventArgs e)
+        {
+            txtResult.Text = "0";
+            txtExp.Text = "";
+            op = String.Empty;
+            saved = 0;
+            opFlag = false;
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            txtResult.Text = txtResult.Text.Remove(txtResult.Text.Length - 1);
+            if (txtResult.Text.Length == 0)
+                txtResult.Text = "0";
+        }
     }
 }
