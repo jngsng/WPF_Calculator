@@ -23,10 +23,13 @@ namespace WPF_Calculator
         double saved = 0;
         string op = string.Empty;
         bool opFlag = false;
+        double memory = 0;
 
         public MainWindow()
         {
             InitializeComponent();
+            btnMC.IsEnabled = false;
+            btnMR.IsEnabled = false;
         }
 
         private void btnNum_Click(object sender, RoutedEventArgs e)
@@ -111,6 +114,41 @@ namespace WPF_Calculator
             txtResult.Text = txtResult.Text.Remove(txtResult.Text.Length - 1);
             if (txtResult.Text.Length == 0)
                 txtResult.Text = "0";
+        }
+
+        private void btnsqrt_Click(object sender, RoutedEventArgs e)
+        {
+            txtExp.Text = "sqrt(" + txtResult.Text + ") =";
+            txtResult.Text = (Math.Sqrt(double.Parse(txtResult.Text))).ToString();
+        }
+
+        private void btnSqr_Click(object sender, RoutedEventArgs e)
+        {
+            txtExp.Text = "sqr(" + txtResult.Text + ") =";
+            txtResult.Text = (double.Parse(txtResult.Text) * double.Parse(txtResult.Text)).ToString();
+        }
+
+        private void btnRecip_Click(object sender, RoutedEventArgs e)
+        {
+            txtExp.Text = "1 / (" + txtResult.Text + ") =";
+            txtResult.Text = (1 / double.Parse(txtResult.Text)).ToString();
+        }
+
+        private void btnMS_Click(object sender, RoutedEventArgs e)
+        {
+            memory = double.Parse(txtResult.Text);
+            btnMC.IsEnabled = true;
+            btnMR.IsEnabled = true;
+        }
+
+        private void btnMminus_Click(object sender, RoutedEventArgs e)
+        {
+            memory -= double.Parse(txtResult.Text);
+        }
+
+        private void btnMplus_Click(object sender, RoutedEventArgs e)
+        {
+            memory += double.Parse(txtResult.Text);
         }
     }
 }
