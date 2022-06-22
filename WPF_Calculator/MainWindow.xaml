@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="580" Width="400">
+        Title="WPF C# 계산기" Height="580" Width="400">
     <DockPanel LastChildFill="true">
 
         <Grid Height="100" 
@@ -47,7 +47,8 @@
                     FontSize="16"
                     BorderThickness="0"
                     Margin="2,1,1,1"
-                    Background="DarkGray">
+                    Background="DarkGray"
+                    Click="btnMC_Click">
             </Button>
             <Button x:Name="btnMR"
                     Grid.Column="1"
@@ -57,7 +58,7 @@
                     BorderThickness="0"
                     Margin="2,1,1,1"
                     Background="DarkGray"
-                    Click="btnMR">
+                    Click="btnMR_Click">
             </Button>
             <Button x:Name="btnMplus"
                     Grid.Column="2"

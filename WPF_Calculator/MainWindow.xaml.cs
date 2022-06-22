@@ -150,5 +150,17 @@ namespace WPF_Calculator
         {
             memory += double.Parse(txtResult.Text);
         }
+
+        private void btnMR_Click(object sender, RoutedEventArgs e)
+        {
+            txtResult.Text = memory.ToString();
+        }
+
+        private void btnMC_Click(object sender, RoutedEventArgs e)
+        {
+            memory = 0;
+            btnMC.IsEnabled = false;
+            btnMR.IsEnabled = false;
+        }
     }
 }
