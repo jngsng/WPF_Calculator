@@ -102,6 +102,7 @@ namespace WPF_Calculator
 
         private void btnC_Click(object sender, RoutedEventArgs e)
         {
+            // C 버튼
             txtResult.Text = "0";
             txtExp.Text = "";
             op = String.Empty;
@@ -111,6 +112,7 @@ namespace WPF_Calculator
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
+            // 삭제 버튼
             txtResult.Text = txtResult.Text.Remove(txtResult.Text.Length - 1);
             if (txtResult.Text.Length == 0)
                 txtResult.Text = "0";
@@ -136,6 +138,7 @@ namespace WPF_Calculator
 
         private void btnMS_Click(object sender, RoutedEventArgs e)
         {
+            // 메모리 세이브
             memory = double.Parse(txtResult.Text);
             btnMC.IsEnabled = true;
             btnMR.IsEnabled = true;
@@ -143,16 +146,19 @@ namespace WPF_Calculator
 
         private void btnMminus_Click(object sender, RoutedEventArgs e)
         {
+            // 메모리 -
             memory -= double.Parse(txtResult.Text);
         }
 
         private void btnMplus_Click(object sender, RoutedEventArgs e)
         {
+            // 메모리 +
             memory += double.Parse(txtResult.Text);
         }
 
         private void btnMR_Click(object sender, RoutedEventArgs e)
         {
+            // 메모리
             txtResult.Text = memory.ToString();
         }
 
